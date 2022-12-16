@@ -32,9 +32,9 @@ img {
 
 @font-face {
     font-family: 'ReformaGroteskDemi';
-    src: url('ReformaGroteskDemi.eot');
+
     src: local('Reforma Grotesk Demi'), local('ReformaGroteskDemi'),
-        url('/Fonts/ReformaGroteskDemi.eot?#iefix') format('embedded-opentype'),
+
         url('/Fonts/ReformaGroteskDemi.woff2') format('woff2'),
         url('/Fonts/ReformaGroteskDemi.woff') format('woff'),
         url('/Fonts/ReformaGroteskDemi.ttf') format('truetype');
@@ -60,14 +60,19 @@ body {
     min-width: 1200px;
     font-family: 'ReformaGroteskDemi', sans-serif;
     font-weight: 400;
-    background-color: #1E1E1E;
-    ;
+    background-image: linear-gradient(180deg, rgba(20, 20, 20, 0.8) 78.8%, #141414 100%), url(/img/Container-backgraund.jpg);
+    background-position: center;
+    background-repeat: repeat-y;
+
+
 }
 
 /* *** *** *** GLOBAL *** *** *** */
 
+
 .container {
-    width: 1920px;
+    width: 1740px;
+    height: 100%;
     margin: 0 auto;
     padding: 0;
 }
@@ -104,13 +109,14 @@ body {
 
 .section-offset {
     padding-top: 180px;
-    padding-bottom: 180px;
+
 }
 
 .section-sides {
     padding-right: 312px;
     padding-left: 312px;
 }
+
 
 /* *** *** HEADER *** *** */
 .header {
@@ -120,12 +126,11 @@ body {
 }
 
 .slideshow {
-    width: 1920px;
+    width: 1740px;
     height: 1080px;
     background: linear-gradient(90deg, #1E1E1E -2.9%, rgba(53, 65, 83, 0) 65.7%), url(../img/header/bckg-01.jpg);
     background-repeat: no-repeat;
 }
-
 
 .header-top {
     margin: 40px 312px;
@@ -211,7 +216,7 @@ body {
     margin: 0;
     width: 33.33%;
     flex-direction: column;
-    padding: 43px 180px;
+    padding: 20px 180px;
 }
 
 .bott-list-item {
@@ -221,9 +226,7 @@ body {
 
 .bott-list-item:not(:last-child) {
     border-right: 1px solid #898989;
-
 }
-
 
 .bott-list-item-title {
     margin-bottom: 20px;
@@ -271,7 +274,6 @@ body {
 
 .services-img {
     margin-bottom: 60px;
-
 }
 
 .services-mid-links {
@@ -306,11 +308,6 @@ body {
     width: 26%;
 }
 
-.services-box-items {}
-
-
-.services-list {}
-
 .services-list-item {
     flex-direction: column;
     justify-content: space-between;
@@ -321,7 +318,6 @@ body {
 
 .services-list-item:not(:last-child) {
     margin-right: 24px;
-
 }
 
 .services-item-title {
@@ -356,91 +352,145 @@ body {
     padding: 10px 10px 6px 20px;
 }
 
-/* OUR WORKS */
-
-.white{color: #ffffff;}
-.primary{color: #F2DAD7;}
-.secondary{color: #D1A39E;}
-.light{color: #CECDCA;}
-.dark{ color: #474545;}
-
-.ease{transition: all 0.3s ease-in-out;}
+/* portfolio */
 
 .portfolio {
     flex-direction: column;
     align-items: center;
 }
 
+.portfolio-rectangle-img {
+    margin-bottom: 60px;
+}
 
-.portfolio-box{
-    width: 100%;
-    min-height: 10vh;
-    background: white;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
-    grid-template-rows: 1fr 1fr;
-    grid-gap: 2px;
-  }
-  .port{
-    position: relative;
-    background: primary;
-    overflow: hidden;
-  }
+.portfolio-list {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
- .port p {
-      position: absolute;
-      text-align: center;
-      width: 100%;
-      padding: 1em 0;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-      z-index: 3;
-    }
-    .grid__title {
-      position: absolute;
-      width: 100%;
-      text-align: center;
-      white-space: nowrap;
-      bottom: 0;
-      font-weight: 100;
-      font-size: 0.8em;
-      z-index: 3;
-      text-transform: uppercase;
-      color: dark;
-      letter-spacing: 2px;
-    }
-  
+.portfolio-list-item {
+    width: 16%;
+    margin-bottom: 20px;
+    border: 1px solid #898989;
+}
 
-  
-/* project hover overlay */
-  .port:hover .grid__overlay {
-    transform: translateY(0%);
-  }
-  
-  .grid__overlay {
-    background: rgba(darken(primary, 10%), .9);
+.portfolio-title {
+    font-weight: 600;
+    font-size: 52px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.portfolio-list-item-img {
     height: 100%;
-    grid-column: 1 / -1;
-    grid-row: 1 / -1;
-    position: relative;
-    display: grid;
-    justify-items: center;
+    object-fit: cover;
+}
+
+
+/*  ACHIVMENTS */
+
+.offset {
+    margin-top: 80px;
+}
+
+.achivments-content {
+    width: 55%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 24px;
+}
+
+.achivments-title {
+    margin-bottom: 40px;
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 140%;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.achivments-icons-img {
+    margin-bottom: 60px;
+}
+
+.achivments-content-tex {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    margin-right: 134px;
+
+}
+
+.achivments-box {
+    width: 45%;
     align-items: center;
-    transform: translateY(101%);
-    transition: ease;
-  }
-  
-  .grid__overlay button {
-      background: none;
-      outline: none;
-      font-weight: 100;
-      letter-spacing: 2px;
-      border: 1px solid white;
-      color: white;
-      text-transform: uppercase;
-      padding: 10px;
-  }
-  
-  
-  
+}
+
+.achivment-box-list{
+    border-collapse: collapse;
+}
+
+
+.achivment-box-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px 20px 35px 20px;
+    border: 1px solid #898989;
+
+}
+
+.achivments-item-number {
+    font-weight: 600;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    color: #DB3138;
+}
+
+.achivments-item-descr {
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.achivments-item-icon {
+    margin-bottom: 16px;
+}
+
+
+/* slider */
+
+.slider{
+    justify-content:center;
+
+}
+
+.tabel-item{
+    border: 1px solid #898989;
+    
+}
+
+.table{
+    border-spacing: 0;
+    border-collapse: collapse;
+    
+}
+
+.collum-two {
+    border-left: none;
+}
+
+.otstup{
+    margin-top: 40px;
+}
